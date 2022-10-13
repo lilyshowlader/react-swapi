@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { getAllStarships } from '../../services/sw-api';
 
 const Starships = (props) => {
-  const[starships, setStarships] = useState({})
+  const[starships, setStarships] = useState([])
   
   useEffect(()=> {
     const fetchStarshipData = async () => {
@@ -22,7 +22,7 @@ const Starships = (props) => {
     <>
       {starships.map(starship =>
         <div key={starship.model}>
-        <Link to='/' state={{starship}}>{starship.name}</Link>
+        <Link to='/starship' state={{starship}}>{starship.name}</Link>
         <br />
       </div>
       )}

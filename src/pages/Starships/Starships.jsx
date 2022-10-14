@@ -17,13 +17,16 @@ const Starships = (props) => {
   
   return ( 
     <>
-    <h3>this is my starships components</h3>
+
+    <h3>Starships</h3>
       {starships.length ?
     <>
       {starships.map(starship =>
-        <div key={starship.model}>
-        <Link to='/starship' state={{starship}}>{starship.name}</Link>
-        <br />
+        <div class="shipDiv" key={starship.model}>
+          
+        <Link to='/starship' state={{starship}}>
+        <button>{starship.name}</button>
+        </Link>
       </div>
       )}
     </>

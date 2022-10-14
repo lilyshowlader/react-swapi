@@ -21,12 +21,13 @@ const StarshipDetails = () => {
   return ( 
     <div>
     <>
-    <h2>this is my starship details component</h2>
+    <h2>Starship Details </h2>
     </>
     <h2>Name: {starshipDetails.name}</h2>
     <h2>Model: {starshipDetails.model}</h2>
+    <Link to='/'>Return</Link>
     </div>
-   );
+  );
 }
- 
+
 export default StarshipDetails;
